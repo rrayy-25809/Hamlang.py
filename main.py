@@ -65,14 +65,14 @@ def Type(text:str):
 
 try:
     file = sys.argv[1]
-    if ".jun" in file:
+    if ".ham" in file:
         with open(file, 'r', encoding='utf-8') as f:
             for line in f:
                 line = line.strip()  # 줄 바꿈 문자를 제거
                 now +=1
                 Type(line)
     else:
-        raise Exception("함태준언어 인터프리터는 확장자가 jun인 함태준언어 파일만 실행 가능합니다.")
+        raise Exception("함태준언어 인터프리터는 확장자가 ham인 함태준언어 파일만 실행 가능합니다.")
 
 except Exception as e:
     print(f"{now}번째 줄에서 문제 발생: {e}")
